@@ -12,5 +12,5 @@
 - 07 Chromium中的IPC
 - 08 Mojo
 - 09 Chromium中的线程和任务
-- 10 深入理解同源（same-site）和 同站（same-origin）
+- 10 深入理解同源（same-origin）和同站（same-site））
 
