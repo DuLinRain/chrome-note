@@ -12,5 +12,5 @@
 - 07 Chromium中的IPC
 - 08 Mojo
 - 09 Chromium中的线程和任务
-- 10 深入理解同源（same-origin）和同站（same-site））
+- 10 [深入理解同源（same-origin）和同站（same-site）](https://github.com/DuLinRain/chrome-note/blob/master/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%90%8C%E6%BA%90%EF%BC%88same-origin%EF%BC%89%E5%92%8C%20%E5%90%8C%E7%AB%99%EF%BC%88same-site%EF%BC%89.MD)
 
