@@ -23,7 +23,7 @@ Blink里面有一个**ResourceLoader**对象负责获得数据，每个loader都
 
 然后每个请求被转换成了一个**URLRequest**对象，然后转换成内部的**URLRequestJob**对象，这个对象实现了对应的协议。当**URLRequest**生成了响应通知时，会使用**ResourceDispatcherHost::Receiver**和请求ID将通知发送到**RenderProcessHost**，进而可以进一步发送到对应的渲染进程，由于每个请求ID都有做保存，因此可以将每个请求和最初发起的Blink关联上。
 ### Cookies
-所有的Cookies都由位于**/net/base**的**CookieMonster** 对象管理。Chromium不会与其它的网络栈（如WinINET 和 Necko)）共享cookie。因为cookie需要在所有tabs中保持一致，所以 **CookieMonster**存在于浏览器进程中(管理所有网络访问)。
+所有的Cookies都由位于`/net/base` 的 **CookieMonster** 对象管理。Chromium不会与其它的网络栈（如WinINET 和 Necko)）共享cookie。因为cookie需要在所有tabs中保持一致，所以 **CookieMonster**存在于浏览器进程中(管理所有网络访问)。
 
 页面可以使用`document.cookie`来获取cookie，当使用它时，实际上会从渲染进程发送一个同步请求到浏览器进程来请求cookie。当浏览器进程处理cookie的时候，Blink工作的线程会被阻塞。当渲染进程的I/O线程收到来自浏览器进程的响应的时候，他会把Blink被阻塞的线程唤醒并且把结果返回给JavaScript 引擎
 
