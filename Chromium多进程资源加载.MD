@@ -8,7 +8,7 @@
 ### 概览
 整个Chromium应用可以划分为三层，最低层的是渲染页面的Blink引擎，在它之上的是渲染进程（最简单情况下，每个tab都有一个独立的），每个渲染进程都包含一个Blink实例，而管理所有渲染进程的则是浏览器进程，它负责所有的网络访问。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/XsgEbl9Edmk1m6J19AbtvbWfjuS0cH6bLDd3c88sG5SwMhJgwXs23J436PVgH2gqQEh7gQCpVwSk9C3v8DygwQ/0?wx_fmt=png)
+![](https://mmbiz.qpic.cn/mmbiz_png/XsgEbl9Edmk1m6J19AbtvbWfjuS0cH6bLDd3c88sG5SwMhJgwXs23J436PVgH2gqQEh7gQCpVwSk9C3v8DygwQ/0)
 
 
 ### Blink
